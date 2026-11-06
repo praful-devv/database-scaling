@@ -1,0 +1,10 @@
+import mongoose from "mongoose";
+import dotenv from "dotenv"
+dotenv.config()
+
+async function connectToDb(){
+  const db =  await mongoose.connect(process.env.MONGO_URI)
+    console.log("connected to database")
+}
+
+export default connectToDb
